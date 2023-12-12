@@ -1,0 +1,16 @@
+Machine Specifications:
+OS: Mac OS Sonoma
+CPU: Apple M1 
+RAM: 16 GB
+
+Frequent items is calculated separately in a separate pass just to make it a function, should not affect runtime comparisons as it's virtual
+
+In the scalability study three graphs for 1%,5% and 10% threshold were generated. As the threshold decreases, there are 
+more candidate pairs to check since less items will qualify as frequent. 
+
+From the three graphs that were generated, for support threshold of 1%, A priori was very slow and scaled poorly as data set increased.
+This is because of the large number of candidate pairs that need to be checked, which the other algorithms 
+simplified with additional passes. 
+For the other two support thresholds, Apriori performed the best possibly due to there being less false positives
+among candidate pairs. The additional passes of the PCY algorithms wouldve been a hindrance in that case.
+
